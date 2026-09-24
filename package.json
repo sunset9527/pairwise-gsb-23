@@ -1,0 +1,61 @@
+{
+  "name": "fastest-validator",
+  "version": "1.19.1",
+  "description": "The fastest JS validator library for NodeJS",
+  "main": "index.js",
+  "browser": "dist/index.min.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "bench": "node benchmark/index.js",
+    "bench:watch": "nodemon benchmark/index.js",
+    "build": "node build.mjs",
+    "prepublishOnly": "npm run build",
+    "dev": "nodemon examples/index.js",
+    "test:watch": "vitest --watch",
+    "lint": "eslint lib test",
+    "lint:fix": "eslint --fix lib test",
+    "deps": "npm-check -u",
+    "postdeps": "npm test",
+    "test": "vitest run --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/icebob/fastest-validator.git"
+  },
+  "keywords": [
+    "validation",
+    "validators",
+    "validate",
+    "schema"
+  ],
+  "files": [
+    "dist",
+    "lib",
+    "index.js",
+    "index.d.ts"
+  ],
+  "author": "Icebob",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/icebob/fastest-validator/issues"
+  },
+  "homepage": "https://github.com/icebob/fastest-validator#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "@types/mongodb": "^4.0.7",
+    "@vitest/coverage-v8": "^4.1.2",
+    "benchmarkify": "^4.0.0",
+    "cli-highlight": "^2.1.11",
+    "esbuild": "^0.27.4",
+    "eslint": "^9.39.4",
+    "globals": "^17.4.0",
+    "mongodb": "^4.17.2",
+    "nodemon": "^3.1.14",
+    "npm-check": "^6.0.1",
+    "prettier": "^3.8.1",
+    "ts-node": "^10.9.2",
+    "tsd": "^0.31.2",
+    "typescript": "~5.7",
+    "vitest": "^4.1.2"
+  }
+}
